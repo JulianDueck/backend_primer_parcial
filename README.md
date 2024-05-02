@@ -56,17 +56,22 @@
 
 ## Configuraciones para hacer el deploy
 
-1. Iniciamos el `jboss-cli`
+1. Generamos el War
+   ```sh
+   mvn clean install
+   ```
+
+2. Iniciamos el `jboss-cli`
    ```sh
    C:\servers\wildfly-26.1.3.Final\bin>jboss-cli.bat
    ```
 
-2. Ejecutamos el siguiente comando:
+3. Ejecutamos el siguiente comando:
    ```sh
    deploy rutaDelWarGenerado
    ```
 
-3. En caso de que ocurra un error del tipo `{"WFLYCTL0412: Required services that are not installed:" => ["jboss.naming.context.java.jboss.datasources.ExampleDS"]` ejecutar el siguiente comando:
+4. En caso de que ocurra un error del tipo `{"WFLYCTL0412: Required services that are not installed:" => ["jboss.naming.context.java.jboss.datasources.ExampleDS"]` ejecutar el siguiente comando:
    ```sh
     /subsystem=ee/service=default-bindings:undefine-attribute(name=datasource)
    ```
