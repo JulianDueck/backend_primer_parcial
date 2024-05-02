@@ -1,0 +1,116 @@
+/* GET consulta de todos los clientes */
+http://localhost:8080/backend/api/clientes
+
+/* POST agregar un nuevo cliente */
+http://localhost:8080/backend/api/clientes
+body : {
+        "nombre": "Julian",
+        "apellido": "Dueck",
+        "nroDocumento": 4944934,
+        "tipoDocumento": "CI",
+        "nacionalidad": "Paraguaya",
+        "email": "jduecks.jds@gmail.com",
+        "telefono": "0981 705 596",
+        "fechaNacimiento": "2001-10-29"
+}
+
+/* GET consulta de clientes por su nombre */
+http://localhost:8080/backend/api/clientes/consultaNombre?nombre=Julian
+
+/* GET consulta de clientes por su apellido */
+http://localhost:8080/backend/api/clientes/consultaApellido?apellido=Dueck
+
+/* GET consulta de clientes por su fecha de cumple */
+http://localhost:8080/backend/api/clientes/consultaCumple?fecha=29-10-2001
+
+/* GET consulta de conceptos de uso de puntos*/
+http://localhost:8080/backend/api/conceptos
+
+/* POST agregar un nuevo conceptos de uso de puntos */
+http://localhost:8080/backend/api/conceptos
+body: {
+        "descripcion": "vale de premio",
+        "puntosRequeridos": 10
+}
+
+/* GET consulta de todas las reglas de asignacion */
+http://localhost:8080/backend/api/reglas
+
+/* POST agregar una nueva regla de asignacion */
+http://localhost:8080/backend/api/reglas
+body: {
+        "limiteInferior": 0,
+        "limiteSuperior": 199999,
+        "montoEquivalencia": 50000
+}
+/* GET consulta monto equivalencia por reglas de asignacion */
+http://localhost:8080/backend/api/reglas/equivalencia?monto=150000
+
+/* GET consulta de vencimientos */
+http://localhost:8080/backend/api/vencimientos
+
+/* POST para agregar un nuevo vencimientos */
+http://localhost:8080/backend/api/vencimientos
+body: {
+        "fechaInicio": "2024-05-05",
+        "fechaFin": "2024-05-07",
+        "duracion": 2
+}
+
+/* GET para consultar todas las bolsas puntos */
+http://localhost:8080/backend/api/bolsas
+
+/* POST para agregar una nueva bolsa de puntos */
+http://localhost:8080/backend/api/bolsas/agregar
+body:{
+        "idCliente": 1,
+        "montoOperacion": 150000
+}
+
+/* GET consultar bolsa de puntos por cliente */
+http://localhost:8080/backend/api/bolsas/cliente?id={id}
+
+/* GET consultar bolsa de puntos por rango */
+http://localhost:8080/backend/api/bolsas/rangoPunto?punto1={punto1}&punto2={punto2}
+
+
+/* GET consultar clientes con bolsa de puntos a vencer en x dias*/
+http://localhost:8080/backend/api/bolsas/vencimiento
+body: {
+    "duracion": 2
+}
+
+/* GET para consultar todos los usoPuntos */
+http://localhost:8080/backend/api/usoPuntos
+
+/* POST para agregar un nuevo uso de puntos */
+http://localhost:8080/backend/api/usoPuntos
+body: {
+     "idCliente": 1,
+      "conceptoDeUso": 1 
+}
+
+/* GET consulta de usoPuntos por concepto */
+http://localhost:8080/backend/api/usoPuntos/concepto
+body : {
+    "idConcepto": 1
+}
+
+/* GET consulta de usoPuntos por cliente */
+http://localhost:8080/backend/api/usoPuntos/cliente
+
+body : {
+    "idCliente": 1
+}
+
+/* GET consulta de usoPuntos por fecha */
+http://localhost:8080/backend/api/usoPuntos/porFecha?fecha=05-05-2024
+
+
+
+
+
+
+
+
+

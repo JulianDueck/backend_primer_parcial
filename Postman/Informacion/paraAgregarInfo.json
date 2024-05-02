@@ -1,0 +1,29 @@
+{
+    "cliente": {
+        "nombre": "Julian",
+        "apellido": "Dueck",
+        "nroDocumento": 4944934,
+        "tipoDocumento": "CI",
+        "nacionalidad": "Paraguaya",
+        "email": "jduecks.jds@gmail.com",
+        "telefono": "0981 705 596",
+        "fechaNacimiento": "2001-10-29"
+    },
+
+    "conceptoDeUso": {
+        "descripcion": "vale de premio",
+        "puntosRequeridos": 10
+    },
+
+    "vencimietos": {
+        "fechaInicio": "2024-05-05",
+        "fechaFin": "2024-05-07",
+        "duracion": 2
+    },
+
+    "reglaAsignacion": {
+        "limiteInferior": 0,
+        "limiteSuperior": 199999,
+        "montoEquivalencia": 50000
+    }
+}
