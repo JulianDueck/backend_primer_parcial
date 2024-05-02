@@ -2,7 +2,7 @@
 
 1. Descargar y descomprimir wildfly v26.1.3: https://www.wildfly.org/downloads/
 
-2. Descargar JDBC postgresql v42.3.7: https://jdbc.postgresql.org/download/
+2. Descargar JDBC postgresql v42.3.9 que se encuentra en el apartado de versiones viejas: https://jdbc.postgresql.org/download/
 
 3. En la ruta `wildfly-26.1.3.Final\modules\org\postgresql\main` pegar el JDBC del paso 2
 
@@ -12,7 +12,7 @@
  
     <module xmlns="urn:jboss:module:1.1" name="org.postgresql"> 
         <resources> 
-            <resource-root path="postgresql-42.3.7.jar"/> 
+            <resource-root path="postgresql-42.3.9.jar"/> 
         </resources> 
  
         <dependencies> 
