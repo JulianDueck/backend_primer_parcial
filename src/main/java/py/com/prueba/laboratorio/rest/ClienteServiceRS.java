@@ -86,6 +86,14 @@ public class ClienteServiceRS {
         c.setNombre(nombre);
         return clienteService.encontrarClientePorNombre(c);
     }
+
+    @GET
+    @Path("/consultaNacionalidad")
+    public List<Cliente> encontrarClientePorNacionalidad(@QueryParam("nacionalidad") String nacionalidad) {
+        Cliente c = new Cliente();
+        c.setNacionalidad(nacionalidad);
+        return clienteService.encontrarClientePorNacionalidad(c);
+    }
     
     @GET
     @Path("/consultaApellido")

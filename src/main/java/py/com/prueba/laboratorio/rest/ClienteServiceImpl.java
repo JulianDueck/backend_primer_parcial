@@ -61,5 +61,10 @@ public class ClienteServiceImpl implements  ClienteServiceRemote, ClienteService
     public List<Cliente> encontrarClientePorFechaNac(Cliente cliente) {
         return clienteDao.FindClienteByFechaNac(cliente);
     }
+
+    @Override
+    public List<Cliente> encontrarClientePorNacionalidad(Cliente cliente) {
+        return clienteDao.FindClienteByNacionalidad(cliente);
+    }
     
 }

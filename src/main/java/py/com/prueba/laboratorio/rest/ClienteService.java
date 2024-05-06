@@ -11,6 +11,7 @@ public interface ClienteService {
     public List<Cliente> encontrarClientePorNombre(Cliente cliente);
     public List<Cliente> encontrarClientePorApellido(Cliente cliente);
     public List<Cliente> encontrarClientePorFechaNac(Cliente cliente);
+    public List<Cliente> encontrarClientePorNacionalidad(Cliente cliente);
     public void registrarCliente(Cliente cliente);
     public void modificarCliente(Cliente cliente);
     public void eliminarCliente(Cliente cliente);

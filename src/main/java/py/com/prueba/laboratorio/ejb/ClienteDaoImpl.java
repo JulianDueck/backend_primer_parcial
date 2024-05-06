@@ -65,6 +65,18 @@ public class ClienteDaoImpl implements ClienteDao {
     }
 
     @Override
+    public List<Cliente> FindClienteByNacionalidad(Cliente cliente) {
+        String sql = "SELECT c FROM Cliente c WHERE lower(c.nacionalidad) LIKE lower(:nacionalidad)";
+        Query q = em.createQuery(sql, Cliente.class);
+        q.setParameter("nacionalidad", "%" + cliente.getNacionalidad() + "%");
+        try {
+            return (List<Cliente>) q.getResultList();
+        } catch (NoResultException e) {
+            return null;
+        }
+    }
+
+    @Override
     public List<Cliente> FindClienteByFechaNac(Cliente cliente) {
         String sql = "SELECT c FROM Cliente c WHERE DAY(c.fechaNacimiento) = :dia "
                 + "AND MONTH(c.fechaNacimiento) = :mes";
